@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgba(178,179,86,0.8);
+  padding: 1%;
+}
+
+html {
+    line-height: 1.15;
+}
+
+.navbar {
+    background-color: #6D8203;
+    min-height: 70px;
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    color: #fff;
+    font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+    z-index: 99;
+    white-space: nowrap;
+    padding: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+ul {
+  list-style-type: none;
+}
+.navbar li {
+    display: inline-block;
+    margin: 1%;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar a:hover{
+  color: #A9A9A9;
+}
+
+.header {
+    
+    background-color: #B4A796;
+    min-height: 300px;
+    padding: 130px 20px;
+    padding-bottom: 0px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.header h1{
+  font-size: 250%;
+  color: #404040;
+  font-weight: bold;
+
+}
+.header h2 {
+  font-size: 130%;
+  color: #F5F5F5;
+  color: #F0F0F0;
+}
+
+.Image-style {
+  width: 250px;
+  height: 160px;
+  margin: 1%;
+  cursor: pointer;
+  border: 5px solid #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+
+.Image-style:hover {
+  -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s;
+}
+
+.footer {
+    margin-top: 2%;
+    height: 50px;
+    position: relative;
+    color: #fff;
+    overflow: auto;
+}
+
+.footer .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #5138a1;
+    background-color: #6D8203;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
