@@ -1,5 +1,7 @@
 # Clicky-Game
 
+![The app](./my-app/src/images/clickyGame.png)
+
 ## About the app
 
 * This is a clicking game mainly created using React.
