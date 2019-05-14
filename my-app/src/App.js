@@ -39,7 +39,8 @@ class App extends Component {
       ],
       clicked: [],
       topScore: 0,
-      score: 0
+      score: 0,
+      guessText: "Click an image to begin!"
     }
   }
 
@@ -56,18 +57,36 @@ class App extends Component {
     let score = this.state.score
     let topScore = this.state.topScore
 
-    if (clicked.includes(event.target.src)) {
+    let guessText = this.state.guessText
+
+    if ((clicked.includes(event.target.src))&& (score <= 11)) {
       clicked = [];
       score = 0;
+      guessText = "Wrong guess"
 
     }else {
+
       clicked.push(event.target.src);
       // console.log(event.target.src);
-      score ++
-      
-        if (score > topScore){
+      if (score <=11) {
+
+        score ++
+        guessText = "You guessed correctly"
+
+      }else if ((score === 12)){
+
+        clicked = [];
+        guessText = "You Win!"
+        score = 0;
+
+      }
+
+      if (score > topScore){
+
           topScore ++
+
         }else 
+
           topScore = this.state.topScore;
 
     }
@@ -79,7 +98,8 @@ class App extends Component {
       images, 
       clicked, 
       topScore, 
-      score
+      score,
+      guessText
     })
 
    // console.log("you clicked")
@@ -96,7 +116,7 @@ render(){
           <li className="nav-item"> <a href="./index.html">Clicky Game</a> </li>
         </ul>
         <ul className="navbar-nav mx-auto">
-          <li className="nav-item guess">Click an image to begin!</li>
+          <li className="nav-item guess">{this.state.guessText}</li>
         </ul>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item navbar-text">Score : <span className="scoreSpan"> {this.state.score} </span> Top Score : <span className="topScoreSpan"> {this.state.topScore}</span></li>
