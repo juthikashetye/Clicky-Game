@@ -40,7 +40,8 @@ class App extends Component {
       clicked: [],
       topScore: 0,
       score: 0,
-      guessText: "Click an image to begin!"
+      guessText: "Click an image to begin!",
+      isShaking: ""
     }
   }
 
@@ -59,12 +60,17 @@ class App extends Component {
 
     let guessText = this.state.guessText
 
+    let isShaking = this.state.shake
+
     if ((clicked.includes(event.target.src))&& (score <= 11)) {
       clicked = [];
       score = 0;
-      guessText = "Wrong guess"
+      guessText = "Wrong guess";
+      isShaking = "shake";
 
     }else {
+
+      isShaking = "";
 
       clicked.push(event.target.src);
       // console.log(event.target.src);
@@ -99,7 +105,8 @@ class App extends Component {
       clicked, 
       topScore, 
       score,
-      guessText
+      guessText,
+      isShaking
     })
 
    // console.log("you clicked")
@@ -134,7 +141,7 @@ render(){
       <div className="container">
 
         {this.state.imageArr.map((object, ind) => {
-            return <img key={ind} src={object} className="Image-style" alt={`${ind}animal`} onClick={this.clickImage} />
+            return <img key={ind} src={object} className={`${this.state.isShaking} Image-style`} alt={`${ind}animal`} onClick={this.clickImage} />
           })}
 
       </div>
